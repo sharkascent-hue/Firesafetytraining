@@ -30,21 +30,7 @@
   };
   burger && burger.addEventListener('click', () => setNav(!document.body.classList.contains('nav-open')));
   addEventListener('keydown', e => e.key === 'Escape' && setNav(false));
-
-  /* ---------- Page transitions ---------- */
-  document.addEventListener('click', e => {
-    const a = e.target.closest('a');
-    if (!a || reduced || e.metaKey || e.ctrlKey || e.shiftKey || a.target === '_blank') return;
-    const href = a.getAttribute('href');
-    if (!href || !/^[\w-]+\.html([?#].*)?$/.test(href)) return;
-    const url = new URL(href, location.href);
-    if (url.pathname === location.pathname) return;
-    e.preventDefault();
-    setNav(false);
-    document.body.classList.add('leaving');
-    setTimeout(() => (location.href = href), 520);
-  });
-  addEventListener('pageshow', e => e.persisted && document.body.classList.remove('leaving'));
+  $$('#menu a').forEach(a => a.addEventListener('click', () => setNav(false)));
 
   /* ---------- Reveal on scroll ---------- */
   $$('[data-stagger]').forEach(group => {
@@ -153,6 +139,15 @@
       clearTimeout(timer); timer = setTimeout(() => go(i + 1), 6000);
     };
     dots.forEach((d, k) => d.addEventListener('click', () => go(k)));
+    // Swipe left/right on touch screens
+    let sx = null, sy = null;
+    slider.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+    slider.addEventListener('touchend', e => {
+      if (sx === null) return;
+      const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) go(i + (dx < 0 ? 1 : -1));
+      sx = null;
+    }, { passive: true });
     go(0);
   }
 
@@ -279,7 +274,6 @@
     if (done) return; done = true;
     try { sessionStorage.setItem('kfs-intro', '1'); } catch (e) {}
     intro.classList.add('leave');
-    const cur = $('.curtain'); cur && cur.classList.add('done');
     root.classList.remove('has-intro');
     setTimeout(() => intro.remove(), 1000);
   };

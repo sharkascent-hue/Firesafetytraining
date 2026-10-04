@@ -13,6 +13,8 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
+html,body{overflow-x:hidden}
+@supports (overflow:clip){html,body{overflow-x:clip}}
 body{font-family:var(--body);color:var(--text);background:var(--white);line-height:1.65;font-size:16.5px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img,video,svg{max-width:100%;display:block}
 a{color:inherit}
@@ -82,19 +84,21 @@ header.site.scrolled{box-shadow:0 10px 30px -20px rgba(0,0,0,.45)}
 .nav-open .burger span::before{top:0;transform:rotate(45deg)}
 .nav-open .burger span::after{top:0;transform:rotate(-45deg)}
 
-/* ---------- Page transition curtain ---------- */
-.curtain{position:fixed;inset:0;z-index:200;pointer-events:none;display:grid;grid-template-columns:repeat(5,1fr)}
-.curtain i{background:var(--ink);transform-origin:top;animation:curtainOut .7s var(--ease) both}
-.curtain i:nth-child(1){animation-delay:.02s;background:var(--red-dark)}
-.curtain i:nth-child(2){animation-delay:.07s;background:var(--red)}
-.curtain i:nth-child(3){animation-delay:.12s;background:var(--orange)}
-.curtain i:nth-child(4){animation-delay:.17s;background:var(--gold)}
-.curtain i:nth-child(5){animation-delay:.22s;background:var(--ink)}
-@keyframes curtainOut{from{transform:scaleY(1)}to{transform:scaleY(0)}}
-.curtain.done i{animation:none;transform:scaleY(0)}
-.leaving .curtain i{transform-origin:bottom;animation:curtainIn .45s var(--ease) both}
-@keyframes curtainIn{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-.has-intro .curtain{display:none}
+/* ---------- Page transitions (native cross-page View Transitions) ----------
+   Browsers that support it get a smooth cross-fade; others navigate normally. */
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:vtOut .28s cubic-bezier(.4,0,1,1) both}
+::view-transition-new(root){animation:vtIn .45s var(--ease) both}
+@keyframes vtOut{to{opacity:0;transform:translateY(-12px)}}
+@keyframes vtIn{from{opacity:0;transform:translateY(18px)}}
+header.site{view-transition-name:site-header}
+::view-transition-group(site-header){animation:none}
+.topbar{view-transition-name:site-topbar}
+::view-transition-group(site-topbar){animation:none}
+/* On arrival, the page content eases in */
+main{animation:pageIn .6s var(--ease) both}
+@keyframes pageIn{from{opacity:0;transform:translateY(14px)}}
+.has-intro main{animation:none}
 
 /* ---------- Embers canvas & glows ---------- */
 .embers-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
@@ -393,14 +397,14 @@ header.site.scrolled{box-shadow:0 10px 30px -20px rgba(0,0,0,.45)}
 
 /* ---------- Testimonials ---------- */
 .slider{position:relative;max-width:900px;margin-inline:auto}
-.slides{position:relative;min-height:290px}
-.slide{position:absolute;inset:0;text-align:center;opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s var(--ease);pointer-events:none}
-.slide.on{opacity:1;transform:none;pointer-events:auto;position:relative}
+.slides{display:grid}
+.slide{grid-area:1/1;align-self:center;text-align:center;opacity:0;visibility:hidden;transform:translateY(16px);transition:opacity .6s,transform .6s var(--ease),visibility 0s .6s;pointer-events:none}
+.slide.on{opacity:1;visibility:visible;transform:none;pointer-events:auto;transition:opacity .6s .15s,transform .6s var(--ease) .15s,visibility 0s}
 .slide blockquote{font-family:var(--head);font-weight:500;font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1.4;color:#fff}
 .slide .who{margin-top:28px;display:flex;justify-content:center;align-items:center;gap:14px}
 .avatar{width:50px;height:50px;border-radius:50%;background:var(--fire);color:#fff;display:grid;place-items:center;font-family:var(--head);font-weight:700}
 .slide .who b{display:block;font-family:var(--head);color:#fff;text-align:left}
-.slide .who span{color:#aaa;font-size:.9rem;display:block;text-align:left}
+.slide .who div span{color:#aaa;font-size:.9rem;display:block;text-align:left}
 .qmark{width:64px;height:64px;color:var(--gold);margin:0 auto 22px;opacity:.9}
 .dots{display:flex;justify-content:center;gap:10px;margin-top:34px}
 .dots button{width:34px;height:5px;border-radius:3px;border:0;background:rgba(255,255,255,.2);cursor:pointer;position:relative;overflow:hidden}
@@ -413,7 +417,7 @@ header.site.scrolled{box-shadow:0 10px 30px -20px rgba(0,0,0,.45)}
 .tcard blockquote{font-size:1.06rem;flex:1;margin-bottom:22px}
 .tcard .who{display:flex;align-items:center;gap:14px;border-top:1px solid var(--line);padding-top:18px}
 .tcard .who b{display:block;font-family:var(--head);color:var(--ink)}
-.tcard .who span{font-size:.88rem;color:var(--muted)}
+.tcard .who div span{font-size:.88rem;color:var(--muted);display:block}
 
 /* ---------- CTA band ---------- */
 .band{position:relative;overflow:hidden;background:linear-gradient(110deg,var(--red-dark),var(--red) 35%,var(--orange) 75%,var(--gold));background-size:200% 100%;animation:shift 10s ease-in-out infinite alternate;padding:70px 0;color:#fff}
@@ -577,7 +581,6 @@ footer a:hover{color:var(--gold)}
   .call-fab{display:grid;position:fixed;left:20px;bottom:20px;width:54px;height:54px;border-radius:50%;background:var(--red);color:#fff;place-items:center;z-index:40;box-shadow:0 10px 25px -8px rgba(200,33,27,.7);opacity:0;transform:translateY(16px);pointer-events:none;transition:.3s}
   .call-fab.show{opacity:1;transform:none;pointer-events:auto}
   .call-fab svg{width:24px;height:24px}
-  .slides{min-height:380px}
 }
 @media (max-width:960px){header.site{backdrop-filter:none;-webkit-backdrop-filter:none;background:#fff}}
 
@@ -640,3 +643,8 @@ footer a:hover{color:var(--gold)}
 .form-success .ok-icon svg{width:40px;height:40px;color:#fff}
 .form-success p{color:var(--muted);max-width:320px}
 .contact-strip .cinfo b{font-size:1.02rem}
+
+/* Avatars keep their initials centred */
+.who .avatar{display:grid;place-items:center;flex:none;color:#fff;font-size:1rem;text-align:center;line-height:1}
+/* On phones and tablets, slide-ins come from below (no sideways overflow) */
+@media (max-width:1024px){.reveal.left,.reveal.right{transform:translateY(34px)}}
