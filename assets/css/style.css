@@ -628,3 +628,15 @@ footer a:hover{color:var(--gold)}
   .ext-wrap{padding:28px}
 }
 @media (max-width:680px){.report{transform:none;max-width:100%}.report .stamp{right:6px;bottom:-30px;width:96px;height:96px}}
+
+/* ---------- Enquiry form states ---------- */
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+.enquiry-form .form-note a{color:var(--red);font-weight:600}
+.enquiry-form.sending .btn{opacity:.7;pointer-events:none}
+.enquiry-form.sending .btn::after{content:"";width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;animation:spin .7s linear infinite}
+.form-success{position:absolute;inset:0;z-index:3;background:#fff;display:grid;place-content:center;justify-items:center;text-align:center;padding:40px;gap:10px;animation:panelIn .5s var(--ease)}
+.form-success[hidden]{display:none}
+.form-success .ok-icon{width:84px;height:84px;border-radius:50%;background:var(--fire);display:grid;place-items:center;box-shadow:0 18px 40px -16px rgba(200,33,27,.8);margin-bottom:8px}
+.form-success .ok-icon svg{width:40px;height:40px;color:#fff}
+.form-success p{color:var(--muted);max-width:320px}
+.contact-strip .cinfo b{font-size:1.02rem}

@@ -23,3 +23,8 @@ The opening animation on the home page plays once per browser session and can be
 It's a static site with no build step. Open `index.html` in a browser, or host the folder anywhere (GitHub Pages, Netlify, cPanel and so on).
 
 To publish with GitHub Pages: **Settings → Pages → Deploy from a branch → `main` / root**.
+
+## Contact form
+Every page has a contact form. Enquiries are emailed to **enda@firesafetraining.ie** through [FormSubmit](https://formsubmit.co), a free service that needs no account.
+
+**One-time setup:** the first time someone submits the form, FormSubmit emails enda@firesafetraining.ie asking to activate the form. Click **Activate Form** in that email, and every enquiry after that arrives straight in the inbox. To send enquiries to a different address, change `FORM_ENDPOINT` at the top of the form section in `assets/js/main.js`.

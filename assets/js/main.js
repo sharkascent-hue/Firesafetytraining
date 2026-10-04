@@ -207,21 +207,42 @@
     show('water');
   }
 
-  /* ---------- Enquiry form -> email ---------- */
-  const form = $('#enquiry');
-  if (form) {
-    const params = new URLSearchParams(location.search);
-    const pre = params.get('service');
+  /* ---------- Enquiry form: sends straight to Enda's inbox ---------- */
+  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/enda@firesafetraining.ie';
+  $$('.enquiry-form').forEach(form => {
+    const pre = new URLSearchParams(location.search).get('service');
     if (pre) [...form.service.options].forEach(o => { if (o.value === pre) o.selected = true; });
-    form.addEventListener('submit', ev => {
+    const note = $('.form-note', form), btn = $('button[type="submit"]', form);
+    form.addEventListener('submit', async ev => {
       ev.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
       const d = Object.fromEntries(new FormData(form));
-      const body = `Name: ${d.name}\nCompany: ${d.company || '-'}\nEmail: ${d.email}\nPhone: ${d.phone || '-'}\nInterested in: ${d.service}\n\n${d.message}`;
-      location.href = 'mailto:enda@firesafetraining.ie?subject=' + encodeURIComponent('Website enquiry: ' + d.service) + '&body=' + encodeURIComponent(body);
-      $('#formNote').textContent = 'Your email app should now be open. Just press send.';
+      if (d._honey) return;
+      btn.disabled = true; form.classList.add('sending');
+      note.textContent = 'Sending your enquiry…';
+      try {
+        const res = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            _subject: 'Website enquiry: ' + d.service,
+            _template: 'table', _captcha: 'false', _replyto: d.email,
+            Name: d.name, Company: d.company || '-', Email: d.email, Phone: d.phone || '-',
+            'Interested in': d.service, Message: d.message, Page: document.title
+          })
+        });
+        const out = await res.json().catch(() => ({}));
+        if (!res.ok || out.success === false || out.success === 'false') throw new Error(out.message || 'Send failed');
+        form.classList.add('sent');
+        $('.form-success', form).hidden = false;
+        form.reset();
+      } catch (err) {
+        note.innerHTML = 'Sorry, we couldn\'t send that just now. Please call <a href="tel:+353863716251">086 371 6251</a> or email <a href="mailto:enda@firesafetraining.ie">enda@firesafetraining.ie</a>.';
+      } finally {
+        btn.disabled = false; form.classList.remove('sending');
+      }
     });
-  }
+  });
 
   $$('.year').forEach(el => (el.textContent = new Date().getFullYear()));
 

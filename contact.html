@@ -98,7 +98,8 @@
       </div>
       <div class="emergency"><svg aria-hidden="true"><use href="#i-alert"/></svg><p><b>In an emergency, always call 112 or 999.</b><br>This form is for training and assessment enquiries only.</p></div>
     </div>
-    <form class="card reveal right" id="enquiry" novalidate>
+    
+    <form class="card enquiry-form reveal right" id="enquiry" novalidate>
       <h3>Send an enquiry</h3>
       <p>Tell us what you need and we'll be in touch.</p>
       <div class="fields">
@@ -108,9 +109,15 @@
         <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
         <div class="field full"><label for="f-service">I'm interested in</label><select id="f-service" name="service"><option>Onsite Fire Safety &amp; Evacuation Training</option><option>Advanced Onsite Training (Residential / Care Home)</option><option>Fire Warden / Marshal Training</option><option>Online Course: Group Registration</option><option>Fire Risk Assessment / Inspection</option><option>Something else</option></select></div>
         <div class="field full"><label for="f-msg">Message *</label><textarea id="f-msg" name="message" required placeholder="Number of staff, location, preferred dates…"></textarea></div>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       </div>
       <button type="submit" class="btn btn-red">Send Enquiry <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
-      <p class="form-note" id="formNote">This opens your email app with your enquiry ready to send.</p>
+      <p class="form-note" role="status" aria-live="polite">We reply to every enquiry, usually within one working day.</p>
+      <div class="form-success" hidden>
+        <div class="ok-icon"><svg aria-hidden="true"><use href="#i-tick"/></svg></div>
+        <h3>Thank you!</h3>
+        <p>Your enquiry has been sent to our team. We'll be in touch shortly.</p>
+      </div>
     </form>
   </div>
 </section>

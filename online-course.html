@@ -151,13 +151,39 @@
   </div>
 </section>
 
-<section class="band">
-  <div class="wrap">
-    <div><h2>Prefer hands-on training at your premises?</h2><p>We also deliver practical onsite courses tailored to your building.</p></div>
-    <div class="row">
-      <a href="tel:+353863716251" class="btn btn-dark"><svg aria-hidden="true"><use href="#i-phone"/></svg>086 371 6251</a>
-      <a href="onsite-training.html" class="btn btn-ghost">Onsite training <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+<section class="section paper contact-strip" id="contact-form">
+  <div class="wrap contact-grid">
+    <div class="reveal left">
+      <span class="eyebrow">Contact Us</span>
+      <h2 class="h2">Booking for a team? Get in touch.</h2>
+      <p class="lede">Ask us about group registration for your staff, or practical onsite training at your premises.</p>
+      <div class="cinfo" style="margin-top:26px">
+        <a href="tel:+353863716251"><span class="ic"><svg aria-hidden="true"><use href="#i-phone"/></svg></span><span><small>Call Enda</small><b>086 371 6251</b></span></a>
+        <a href="mailto:enda@firesafetraining.ie"><span class="ic"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><span><small>Email</small><b>enda@firesafetraining.ie</b></span></a>
+        <div class="ci"><span class="ic"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span><small>Offices</small><b>Shannon · Dublin · Sligo · Limerick · Galway</b></span></div>
+      </div>
     </div>
+    
+    <form class="card enquiry-form reveal right" id="enquiry" novalidate>
+      <h3>Send an enquiry</h3>
+      <p>Tell us what you need and we'll be in touch.</p>
+      <div class="fields">
+        <div class="field"><label for="f-name">Name *</label><input id="f-name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="f-company">Company / Organisation</label><input id="f-company" name="company" autocomplete="organization"></div>
+        <div class="field"><label for="f-email">Email *</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field full"><label for="f-service">I'm interested in</label><select id="f-service" name="service"><option>Onsite Fire Safety &amp; Evacuation Training</option><option>Advanced Onsite Training (Residential / Care Home)</option><option>Fire Warden / Marshal Training</option><option selected>Online Course: Group Registration</option><option>Fire Risk Assessment / Inspection</option><option>Something else</option></select></div>
+        <div class="field full"><label for="f-msg">Message *</label><textarea id="f-msg" name="message" required placeholder="Number of staff, location, preferred dates…"></textarea></div>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      </div>
+      <button type="submit" class="btn btn-red">Send Enquiry <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      <p class="form-note" role="status" aria-live="polite">We reply to every enquiry, usually within one working day.</p>
+      <div class="form-success" hidden>
+        <div class="ok-icon"><svg aria-hidden="true"><use href="#i-tick"/></svg></div>
+        <h3>Thank you!</h3>
+        <p>Your enquiry has been sent to our team. We'll be in touch shortly.</p>
+      </div>
+    </form>
   </div>
 </section></main>
 <footer>
