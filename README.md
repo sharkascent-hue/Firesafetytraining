@@ -2,9 +2,22 @@
 
 The website for Kirby Fire Safety (firesafetraining.ie): fire safety training and fire risk assessments across Ireland.
 
+## Pages
+| File | Page |
+|---|---|
+| `index.html` | Home: opening animation, services, interactive fire triangle, team, testimonials |
+| `online-course.html` | Online fire safety course (€25): intro video, modules, individual and group registration |
+| `onsite-training.html` | Onsite courses, interactive extinguisher guide, legislation and HIQA compliance |
+| `fire-risk-assessment.html` | Fire risk assessments and inspections |
+| `about.html` | Company story, timeline, Pat & Enda Kirby, offices, testimonials |
+| `contact.html` | Contact details and enquiry form |
+
 ## Files
-- `index.html`: the whole site (HTML, CSS and JS in one file)
-- `assets/`: logo, team photos, course intro video and its cover image
+- `assets/css/style.css`: all styles
+- `assets/js/main.js`: animations and interactions (opening animation, embers, page transitions, counters, fire triangle, extinguisher guide, enquiry form)
+- `assets/`: logo, team photos, course video, favicon
+
+The opening animation on the home page plays once per browser session and can be skipped. Animations are turned off for visitors who have "reduce motion" switched on.
 
 ## Running it
 It's a static site with no build step. Open `index.html` in a browser, or host the folder anywhere (GitHub Pages, Netlify, cPanel and so on).
