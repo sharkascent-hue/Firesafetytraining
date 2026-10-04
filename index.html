@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kirby Fire Safety | Fire Safety Training &amp; Fire Risk Assessment Ireland</title>
+<meta name="description" content="Kirby Fire Safety: Ireland's trusted fire safety experts since 2001. Online fire safety course (€25, certificate on completion), onsite fire warden & evacuation training, and professional fire risk assessments nationwide.">
+<meta name="theme-color" content="#141414">
+<meta property="og:title" content="Kirby Fire Safety | Fire Safety Training Ireland">
+<meta property="og:description" content="Online & onsite fire safety training and fire risk assessments from operational firefighters. Nationwide from Dublin, Sligo, Limerick & Galway.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/course-poster.jpg">
+<link rel="icon" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Kirby Fire Safety",
+  "url": "https://firesafetraining.ie",
+  "telephone": "+353863716251",
+  "email": "enda@firesafetraining.ie",
+  "foundingDate": "2001",
+  "address": { "@type": "PostalAddress", "streetAddress": "Smithstown", "addressLocality": "Shannon", "addressRegion": "Co. Clare", "addressCountry": "IE" },
+  "areaServed": "Ireland",
+  "description": "Fire safety training, fire warden courses and fire risk assessments across Ireland."
+}
+</script>
+<style>
+:root{
+  --gold:#F2B92B; --gold-soft:#FBEFD0; --red:#C8211B; --red-dark:#9E1611;
+  --ink:#141414; --ink-2:#1E1E1E; --ink-3:#2A2A2A;
+  --text:#2B2B2B; --muted:#626262; --line:#E7E2D8; --paper:#FAF8F4; --white:#fff;
+  --radius:14px; --shadow:0 18px 50px -20px rgba(0,0,0,.25);
+  --head:"Jost",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--body);color:var(--text);background:var(--white);line-height:1.65;font-size:16.5px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--head);color:var(--ink);line-height:1.12;letter-spacing:-.01em}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--head);font-weight:600;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--gold)}
+.section{padding:clamp(72px,9vw,120px) 0}
+.section-head{max-width:720px;margin-bottom:52px}
+.section-head h2{font-size:clamp(2rem,4vw,3rem);margin:14px 0 16px}
+.section-head p{color:var(--muted);font-size:1.08rem}
+.center{text-align:center;margin-inline:auto}
+.center .eyebrow::after{content:"";width:28px;height:2px;background:var(--gold)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--head);font-weight:600;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:15px 26px;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:transform .2s,background .2s,color .2s,box-shadow .2s}
+.btn svg{width:18px;height:18px}
+.btn-gold{background:var(--gold);color:var(--ink);box-shadow:0 10px 24px -10px rgba(242,185,43,.8)}
+.btn-gold:hover{transform:translateY(-2px);background:#ffc93d}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--ink-3);transform:translateY(-2px)}
+.btn-outline{border-color:var(--ink);color:var(--ink)}
+.btn-outline:hover{background:var(--ink);color:#fff}
+
+/* Top bar + header */
+.topbar{background:var(--ink);color:#d6d6d6;font-size:.86rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:9px 0;flex-wrap:wrap}
+.topbar a{text-decoration:none;display:inline-flex;align-items:center;gap:7px}
+.topbar a:hover{color:var(--gold)}
+.topbar svg{width:15px;height:15px;color:var(--gold)}
+.topbar .links{display:flex;gap:22px}
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:box-shadow .3s,border-color .3s}
+header.site.scrolled{box-shadow:0 8px 30px -18px rgba(0,0,0,.35);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.brand img{height:58px;width:auto}
+.menu{display:flex;align-items:center;gap:30px;list-style:none}
+.menu a{text-decoration:none;font-family:var(--head);font-weight:600;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);position:relative;padding:6px 0}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold);transition:width .25s}
+.menu a:not(.btn):hover::after{width:100%}
+.menu .btn{padding:12px 20px;font-size:.85rem}
+.burger{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;align-items:center;justify-content:center}
+.burger span,.burger span::before,.burger span::after{display:block;width:26px;height:2.5px;background:var(--ink);border-radius:2px;position:relative;transition:.3s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-8px}.burger span::after{top:8px}
+.nav-open .burger span{background:transparent}
+.nav-open .burger span::before{top:0;transform:rotate(45deg)}
+.nav-open .burger span::after{top:0;transform:rotate(-45deg)}
+
+/* Hero */
+.hero{position:relative;background:var(--ink);color:#fff;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:
+  radial-gradient(900px 520px at 85% 110%,rgba(200,33,27,.55),transparent 60%),
+  radial-gradient(700px 420px at 70% 100%,rgba(242,185,43,.35),transparent 60%),
+  radial-gradient(600px 400px at 10% -10%,rgba(255,255,255,.06),transparent 60%),
+  linear-gradient(180deg,#151515,#0d0d0d)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.07;background-image:linear-gradient(rgba(255,255,255,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.6) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(180deg,#000,transparent 85%)}
+.embers{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.embers i{position:absolute;bottom:-10px;width:4px;height:4px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px 2px rgba(242,140,43,.8);opacity:0;animation:rise linear infinite}
+@keyframes rise{0%{transform:translate(0,0);opacity:0}10%{opacity:.9}100%{transform:translate(var(--dx,30px),-80vh);opacity:0}}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;padding:clamp(70px,10vw,130px) 0 clamp(90px,10vw,140px)}
+.hero h1{color:#fff;font-size:clamp(2.5rem,5.6vw,4.4rem);font-weight:700;margin:20px 0 22px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .lead{font-size:1.15rem;color:#cfcfcf;max-width:580px;margin-bottom:34px}
+.hero .eyebrow{color:var(--gold)}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:30px;backdrop-filter:blur(8px)}
+.price-tag{display:flex;align-items:flex-end;gap:12px;margin-bottom:6px}
+.price-tag strong{font-family:var(--head);font-size:4rem;line-height:1;color:var(--gold)}
+.price-tag span{color:#bdbdbd;font-size:.95rem;padding-bottom:8px}
+.hero-card h3{color:#fff;font-size:1.35rem;margin-bottom:18px}
+.ticks{list-style:none;display:grid;gap:11px;margin-bottom:26px}
+.ticks li{display:flex;gap:12px;align-items:flex-start}
+.ticks svg{flex:none;width:20px;height:20px;color:var(--gold);margin-top:3px}
+.hero-card .ticks li{color:#e0e0e0}
+.hero-card .btn{width:100%}
+
+/* Stats */
+.stats{position:relative;z-index:2;margin-top:-56px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.stat{padding:30px 26px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:var(--head);font-size:2.4rem;color:var(--ink);line-height:1}
+.stat b sup{color:var(--red);font-size:1.3rem}
+.stat span{color:var(--muted);font-size:.93rem}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.service{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:38px 32px 34px;transition:transform .3s,box-shadow .3s,border-color .3s;display:flex;flex-direction:column}
+.service:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.service::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--red),var(--gold));border-radius:var(--radius) var(--radius) 0 0;transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.service:hover::before{transform:scaleX(1)}
+.icon{width:62px;height:62px;border-radius:14px;background:var(--gold-soft);display:grid;place-items:center;margin-bottom:24px;color:var(--red)}
+.icon svg{width:32px;height:32px}
+.service h3{font-size:1.45rem;margin-bottom:12px}
+.service p{color:var(--muted);margin-bottom:24px;flex:1}
+.link{font-family:var(--head);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.88rem;text-decoration:none;color:var(--ink);display:inline-flex;align-items:center;gap:8px}
+.link svg{width:16px;height:16px;transition:transform .2s;color:var(--red)}
+.link:hover svg{transform:translateX(4px)}
+
+/* Online course */
+.course{background:var(--paper)}
+.course-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:start}
+.video-frame{position:relative;border-radius:18px;overflow:hidden;background:#000;box-shadow:0 30px 70px -30px rgba(0,0,0,.55);aspect-ratio:16/9}
+.video-frame video{width:100%;height:100%;object-fit:cover}
+.play{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.35));border:0;cursor:pointer;transition:opacity .3s}
+.play span{width:86px;height:86px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:0 0 0 12px rgba(200,33,27,.25);transition:transform .25s}
+.play:hover span{transform:scale(1.08)}
+.play svg{width:34px;height:34px;color:#fff;margin-left:5px}
+.play.hidden{opacity:0;pointer-events:none}
+.video-caption{display:flex;align-items:center;gap:10px;margin-top:16px;color:var(--muted);font-size:.93rem}
+.video-caption svg{width:18px;height:18px;color:var(--red)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 30px}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:.9rem;font-weight:500;display:inline-flex;align-items:center;gap:8px}
+.chip svg{width:16px;height:16px;color:var(--red)}
+.course-info h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin:14px 0 14px}
+.course-info .ticks li{color:var(--text)}
+.course-info .ticks svg{color:var(--red)}
+.modules{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:8px 0 6px}
+.modules div{background:var(--ink);color:#fff;border-radius:8px;text-align:center;padding:10px 4px;font-family:var(--head);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.modules div b{display:block;font-size:1.3rem;color:var(--gold);letter-spacing:0}
+.reg-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:56px}
+.reg{background:#fff;border-radius:var(--radius);padding:34px;border:1px solid var(--line);display:flex;flex-direction:column}
+.reg.featured{background:var(--ink);color:#d9d9d9;border-color:var(--ink)}
+.reg.featured h3{color:#fff}
+.reg .tag{font-family:var(--head);font-weight:600;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+.reg.featured .tag{color:var(--gold)}
+.reg h3{font-size:1.5rem;margin-bottom:10px}
+.reg p{margin-bottom:22px;flex:1}
+.reg .actions{display:flex;gap:12px;flex-wrap:wrap}
+.reg.featured .btn-outline{border-color:rgba(255,255,255,.4);color:#fff}
+.reg.featured .btn-outline:hover{background:#fff;color:var(--ink)}
+
+/* Onsite */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.split p+p{margin-top:16px}
+.feature-panel{background:var(--ink);border-radius:20px;padding:40px;color:#ddd;position:relative;overflow:hidden}
+.feature-panel::after{content:"";position:absolute;right:-80px;bottom:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(200,33,27,.55),transparent 70%)}
+.feature-panel h3{color:#fff;font-size:1.3rem;margin-bottom:20px}
+.sector-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;list-style:none;position:relative;z-index:1}
+.sector-list li{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:12px 14px;border-radius:10px;font-size:.95rem}
+.sector-list svg{width:18px;height:18px;color:var(--gold);flex:none}
+.courses-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:64px}
+.ccard{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#fff;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.ccard:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.ccard .top{background:linear-gradient(135deg,#1b1b1b,#2b2b2b);padding:28px;color:#fff;position:relative;min-height:150px;display:flex;flex-direction:column;justify-content:flex-end}
+.ccard .top .num{position:absolute;top:18px;right:22px;font-family:var(--head);font-weight:800;font-size:3rem;color:rgba(242,185,43,.25);line-height:1}
+.ccard .top svg{width:38px;height:38px;color:var(--gold);margin-bottom:14px}
+.ccard h3{color:#fff;font-size:1.2rem;text-transform:uppercase;letter-spacing:.02em}
+.ccard .body{padding:24px 28px 28px;flex:1;display:flex;flex-direction:column;gap:18px}
+.ccard .body p{color:var(--muted);flex:1;font-size:.97rem}
+.also{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;color:var(--muted);font-size:.95rem}
+.also .chip{background:var(--paper)}
+
+/* Compliance */
+.compliance{background:var(--ink);color:#cfcfcf;position:relative;overflow:hidden}
+.compliance::before{content:"";position:absolute;inset:auto -10% -40% auto;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(242,185,43,.12),transparent 65%)}
+.compliance h2,.compliance h3{color:#fff}
+.compliance .eyebrow{color:var(--gold)}
+.comp-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;position:relative}
+.comp-grid h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin:14px 0 18px}
+.law{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 30px}
+.law span{border:1px solid rgba(242,185,43,.4);color:var(--gold);border-radius:6px;padding:7px 12px;font-size:.88rem;font-weight:500}
+.duty{list-style:none;display:grid;gap:14px;counter-reset:d}
+.duty li{display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px;counter-increment:d}
+.duty li::before{content:counter(d,decimal-leading-zero);font-family:var(--head);font-weight:700;color:var(--gold);font-size:1.1rem;line-height:1.6}
+.care{background:linear-gradient(160deg,var(--red),var(--red-dark));border-radius:20px;padding:38px;color:#fde9e8;align-self:start}
+.care svg{width:44px;height:44px;color:#fff;margin-bottom:18px}
+.care h3{font-size:1.5rem;margin-bottom:14px}
+.care .badge{display:inline-block;margin-top:22px;background:rgba(0,0,0,.2);border-radius:6px;padding:8px 12px;font-size:.88rem;font-weight:600;color:#fff}
+
+/* Risk assessment */
+.ra-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.ra-intro h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin:14px 0 18px}
+.ra-intro p{color:var(--muted);margin-bottom:22px}
+.process{list-style:none;display:grid;gap:0;margin:28px 0 34px;position:relative}
+.process li{display:grid;grid-template-columns:44px 1fr;gap:16px;padding-bottom:22px;position:relative}
+.process li:not(:last-child)::before{content:"";position:absolute;left:21px;top:44px;bottom:0;width:2px;background:var(--line)}
+.process li b{width:44px;height:44px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-family:var(--head);font-size:1.05rem}
+.process li div{padding-top:9px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.check{background:var(--paper);border-radius:var(--radius);padding:26px;border:1px solid var(--line);transition:border-color .25s,background .25s}
+.check:hover{border-color:var(--gold);background:#fff}
+.check .icon{width:50px;height:50px;margin-bottom:16px;background:#fff;border:1px solid var(--line)}
+.check .icon svg{width:26px;height:26px}
+.check h4{font-size:1.1rem;margin-bottom:6px}
+.check p{color:var(--muted);font-size:.94rem}
+.equip{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+
+/* About / team */
+.about{background:var(--paper)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px}
+.about-grid h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin:14px 0 18px}
+.about-grid p{color:var(--muted)}
+.about-grid p+p{margin-top:14px}
+.offices{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.office{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;display:flex;gap:14px;align-items:center}
+.office svg{width:26px;height:26px;color:var(--red);flex:none}
+.office b{font-family:var(--head);font-size:1.15rem;color:var(--ink);display:block;line-height:1.2}
+.office span{font-size:.88rem;color:var(--muted)}
+.office.hq{grid-column:1/-1;background:var(--ink);border-color:var(--ink)}
+.office.hq b{color:#fff}.office.hq span{color:#bbb}.office.hq svg{color:var(--gold)}
+.team{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.person{background:#fff;border-radius:20px;overflow:hidden;display:grid;grid-template-columns:240px 1fr;border:1px solid var(--line);box-shadow:0 20px 50px -35px rgba(0,0,0,.4)}
+.person .photo{position:relative;background:#ddd}
+.person .photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.person .photo::after{content:"";position:absolute;inset:auto 0 0 0;height:6px;background:linear-gradient(90deg,var(--red),var(--gold))}
+.person .info{padding:30px 30px 28px}
+.person .role{font-family:var(--head);font-weight:600;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+.person h3{font-size:1.6rem;margin:6px 0 14px}
+.person p{color:var(--muted);font-size:.95rem}
+.person .more{margin-top:14px}
+.person details summary{cursor:pointer;font-family:var(--head);font-weight:600;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);list-style:none;display:inline-flex;align-items:center;gap:6px}
+.person details summary::-webkit-details-marker{display:none}
+.person details summary::after{content:"+";color:var(--red);font-size:1.2rem;line-height:1}
+.person details[open] summary::after{content:"–"}
+.person details p{margin-top:12px}
+.creds{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.creds span{font-size:.78rem;background:var(--gold-soft);color:#6b4d00;border-radius:4px;padding:4px 8px;font-weight:500}
+
+/* Testimonials */
+.tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px;position:relative;display:flex;flex-direction:column}
+.tcard .q{position:absolute;top:22px;right:26px;width:44px;height:44px;color:var(--gold-soft)}
+.stars{display:flex;gap:3px;margin-bottom:14px;color:var(--gold)}
+.stars svg{width:18px;height:18px}
+.tcard blockquote{padding-right:44px;font-size:1.06rem;color:var(--text);flex:1;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:14px;border-top:1px solid var(--line);padding-top:18px}
+.avatar{width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--gold);display:grid;place-items:center;font-family:var(--head);font-weight:700}
+.who b{display:block;font-family:var(--head);color:var(--ink);font-size:1.02rem}
+.who span{font-size:.88rem;color:var(--muted)}
+
+/* CTA band */
+.band{background:linear-gradient(120deg,var(--gold),#f7cc55);padding:56px 0}
+.band .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.band h2{font-size:clamp(1.6rem,3vw,2.3rem);max-width:640px}
+.band .row{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.contact-grid h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin:14px 0 16px}
+.contact-grid > div > p{color:var(--muted);margin-bottom:28px}
+.cinfo{display:grid;gap:14px}
+.cinfo a,.cinfo div.ci{display:flex;gap:16px;align-items:center;text-decoration:none;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 20px;transition:border-color .2s,transform .2s}
+.cinfo a:hover{border-color:var(--gold);transform:translateX(4px)}
+.cinfo .ic{width:46px;height:46px;border-radius:10px;background:var(--ink);display:grid;place-items:center;flex:none}
+.cinfo .ic svg{width:22px;height:22px;color:var(--gold)}
+.cinfo small{display:block;color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.1em}
+.cinfo b{font-family:var(--head);font-size:1.12rem;color:var(--ink);word-break:break-word}
+form.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:38px;box-shadow:var(--shadow)}
+form.card h3{font-size:1.4rem;margin-bottom:6px}
+form.card > p{color:var(--muted);font-size:.95rem;margin-bottom:24px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:.85rem;font-weight:600;color:var(--ink)}
+.field input,.field select,.field textarea{font:inherit;font-size:.97rem;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--paper);color:var(--text);transition:border-color .2s,background .2s;width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);background:#fff}
+.field textarea{min-height:130px;resize:vertical}
+form.card .btn{margin-top:22px;width:100%}
+.form-note{font-size:.82rem;color:var(--muted);margin-top:12px;text-align:center}
+
+/* Footer */
+footer{background:#0e0e0e;color:#a9a9a9;padding:72px 0 28px;font-size:.95rem}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
+.flogo{background:#fff;border-radius:12px;padding:14px 18px;display:inline-block;margin-bottom:18px}
+.flogo img{height:56px;width:auto}
+footer h4{color:#fff;font-size:.95rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--gold)}
+.fbottom{border-top:1px solid #262626;padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.86rem}
+
+/* Floating */
+.to-top{position:fixed;right:20px;bottom:20px;width:50px;height:50px;border-radius:12px;background:var(--gold);color:var(--ink);border:0;display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 25px -8px rgba(0,0,0,.4);opacity:0;transform:translateY(16px);pointer-events:none;transition:.3s;z-index:40}
+.to-top.show{opacity:1;transform:none;pointer-events:auto}
+.to-top svg{width:22px;height:22px}
+.call-fab{display:none}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.embers{display:none}html{scroll-behavior:auto}}
+
+/* Responsive */
+@media (max-width:1024px){
+  .hero-grid,.course-grid,.split,.comp-grid,.ra-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .services-grid,.courses-grid{grid-template-columns:1fr 1fr}
+  .team{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:880px){
+  .burger{display:flex}
+  .menu{position:fixed;inset:78px 0 auto 0;flex-direction:column;align-items:stretch;gap:0;background:#fff;padding:10px 20px 24px;border-bottom:1px solid var(--line);box-shadow:0 20px 40px -20px rgba(0,0,0,.3);transform:translateY(-12px);opacity:0;pointer-events:none;transition:.25s}
+  .nav-open .menu{transform:none;opacity:1;pointer-events:auto}
+  .menu li{border-bottom:1px solid var(--line)}
+  .menu li:last-child{border:0;padding-top:16px}
+  .menu a{display:block;padding:16px 0}
+  .menu .btn{display:flex}
+  .topbar .links .hide-sm{display:none}
+}
+@media (max-width:680px){
+  body{font-size:16px}
+  .services-grid,.courses-grid,.reg-grid,.tgrid,.checks,.fields,.sector-list,.fgrid{grid-template-columns:1fr}
+  .person{grid-template-columns:1fr}
+  .person .photo{height:340px}
+  .modules{grid-template-columns:repeat(3,1fr)}
+  .hero-card,.reg,form.card,.feature-panel,.care{padding:26px}
+  .topbar .wrap{justify-content:center}
+  .topbar .tagline{display:none}
+  .brand img{height:46px}
+  .stats{margin-top:-40px}
+  .stat{padding:22px 18px}
+  .stat b{font-size:2rem}
+  .call-fab{display:grid;position:fixed;left:20px;bottom:20px;width:54px;height:54px;border-radius:50%;background:var(--red);color:#fff;place-items:center;z-index:40;box-shadow:0 10px 25px -8px rgba(200,33,27,.7)}
+  .call-fab svg{width:24px;height:24px}
+  .call-fab{opacity:0;transform:translateY(16px);pointer-events:none;transition:.3s}
+  .call-fab.show{opacity:1;transform:none;pointer-events:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- SVG icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="m8 12.5 2.5 2.5L16 9.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15a1 1 0 0 0 1.5.9l12-7.5a1 1 0 0 0 0-1.8l-12-7.5A1 1 0 0 0 7 4.5z"/></symbol>
+    <symbol id="i-laptop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20M10 9.5v3l3-1.5z"/></symbol>
+    <symbol id="i-group" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="3"/><path d="M6.5 14a5.5 5.5 0 0 1 11 0"/><circle cx="5" cy="15.5" r="2"/><circle cx="12" cy="15.5" r="2"/><circle cx="19" cy="15.5" r="2"/><path d="M1.5 22a3.5 3.5 0 0 1 7 0M8.5 22a3.5 3.5 0 0 1 7 0M15.5 22a3.5 3.5 0 0 1 7 0"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4.4 0 7-2.9 7-6.8 0-4.6-3.6-7-4.6-11.2-2 1.3-3.4 3.5-3.4 6-1.3-.8-2-2.3-2-3.8C7 8 5 10.8 5 15.2 5 19.1 7.6 22 12 22z"/><path d="M12 22c-1.7 0-3-1.2-3-3 0-2 1.5-3 3-5 1.5 2 3 3 3 5 0 1.8-1.3 3-3 3z"/></symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 2h6v4H9zM8.5 12l2 2 4-4M8.5 18h7"/></symbol>
+    <symbol id="i-exit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h6v18h-6"/><circle cx="8" cy="5" r="1.6"/><path d="m5 21 2.5-6 2.5 2v4M7.5 15l1-5 3 2.5 2 .5M8.5 10 6 11l-1 3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-warden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="3.2"/><path d="M5 22v-4a7 7 0 0 1 14 0v4"/><path d="M9 13.5 12 22l3-8.5"/><path d="M7.5 4.5c1.5-2.5 7.5-2.5 9 0"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 13.5 12 21l-7.5-7.5A5 5 0 0 1 12 6.5a5 5 0 0 1 7.5 7z"/><path d="M12 10v6M9 13h6"/></symbol>
+    <symbol id="i-alarm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="7"/><circle cx="12" cy="13" r="2.5"/><path d="M5 4 2.5 6.5M19 4l2.5 2.5"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="8" width="8" height="14" rx="3"/><path d="M9 8V5h4v3M13 5h3l3-2M11 5V3"/></symbol>
+    <symbol id="i-door" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16M6 22V3h12v19"/><circle cx="14.5" cy="12.5" r="1"/></symbol>
+    <symbol id="i-sign" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="m14 9 3 3-3 3M17 12H7"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-device" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.2 13.8-1.7 8.2 5.5-3 5.5 3-1.7-8.2"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M10 9v6M14 9v6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24" fill="currentColor"><path d="M3 21c3 0 7-1 7-8V5H3v8h4c0 4-2 5-4 5zm11 0c3 0 7-1 7-8V5h-7v8h4c0 4-2 5-4 5z"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h18M6 22V4h12v18M10 8h4M10 12h4M10 16h4"/></symbol>
+  </defs>
+</svg>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="tagline">Ireland's fire safety experts since 2001</span>
+    <div class="links">
+      <a href="tel:+353863716251"><svg><use href="#i-phone"/></svg>086 371 6251</a>
+      <a href="mailto:enda@firesafetraining.ie" class="hide-sm"><svg><use href="#i-mail"/></svg>enda@firesafetraining.ie</a>
+    </div>
+  </div>
+</div>
+
+<header class="site" id="header">
+  <nav class="wrap nav" aria-label="Main">
+    <a href="#top" class="brand" aria-label="Kirby Fire Safety home"><img src="assets/logo-tight.jpg" alt="Kirby Fire Safety" width="600" height="292"></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#online-course">Online Course</a></li>
+      <li><a href="#onsite-training">Onsite Training</a></li>
+      <li><a href="#risk-assessment">Risk Assessment</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#register" class="btn btn-red">Book Online · €25</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="embers" id="embers" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Fire Safety Training · Ireland</span>
+      <h1>Trained by firefighters. <em>Ready for anything.</em></h1>
+      <p class="lead">Kirby Fire Safety gives your people the skills and confidence to prevent fire, raise the alarm and evacuate safely, with training from operational firefighters who have spent their careers on the front line.</p>
+      <div class="hero-ctas">
+        <a href="#online-course" class="btn btn-gold">Start Online Course <svg><use href="#i-arrow"/></svg></a>
+        <a href="#contact" class="btn btn-ghost">Book Onsite Training</a>
+      </div>
+    </div>
+    <aside class="hero-card reveal">
+      <div class="price-tag"><strong>€25</strong><span>per person</span></div>
+      <h3>Ireland's No.1 Online Fire Safety Training Course</h3>
+      <ul class="ticks">
+        <li><svg><use href="#i-check"/></svg>One hour to complete, in stages if you like</li>
+        <li><svg><use href="#i-check"/></svg>Works on phone, tablet and computer</li>
+        <li><svg><use href="#i-check"/></svg>Certificate to download straight away</li>
+        <li><svg><use href="#i-check"/></svg>Suitable for nursing homes, hotels, schools and offices</li>
+      </ul>
+      <a href="#register" class="btn btn-gold">Buy Course</a>
+    </aside>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stats-grid reveal">
+      <div class="stat"><b>2001</b><span>Delivering fire safety training since</span></div>
+      <div class="stat"><b>60<sup>+</sup></b><span>Years of operational firefighting between our directors</span></div>
+      <div class="stat"><b>4</b><span>Offices: Dublin, Sligo, Limerick &amp; Galway</span></div>
+      <div class="stat"><b>All</b><span>of Ireland: we travel nationwide</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Fire safety services for every workplace and home</h2>
+      <p>From a one-hour online certificate to full site-specific training and professional risk assessments, we help you protect people and stay compliant.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service reveal">
+        <div class="icon"><svg><use href="#i-laptop"/></svg></div>
+        <h3>Online Fire Safety Course</h3>
+        <p>Our own online fire safety course, designed in-house, so your team can train at a time and place that suits them, with a certificate on completion.</p>
+        <a href="#online-course" class="link">Learn more <svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="service reveal">
+        <div class="icon"><svg><use href="#i-group"/></svg></div>
+        <h3>Onsite Fire Safety Training</h3>
+        <p>Practical, site-specific courses delivered at your premises for hospitals, schools, hotels, nursing homes, offices and industry.</p>
+        <a href="#onsite-training" class="link">Learn more <svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="service reveal">
+        <div class="icon"><svg><use href="#i-flame"/></svg></div>
+        <h3>Fire Risk Assessments</h3>
+        <p>Professional fire safety inspections for businesses of every size, and for homes, with a written report and clear action plan.</p>
+        <a href="#risk-assessment" class="link">Learn more <svg><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ONLINE COURSE -->
+<section class="section course" id="online-course">
+  <div class="wrap">
+    <div class="course-grid">
+      <div class="reveal">
+        <div class="video-frame">
+          <video id="courseVideo" src="assets/fire-safety-course.mp4" poster="assets/course-poster.jpg" preload="metadata" playsinline controls></video>
+          <button class="play" id="playBtn" aria-label="Play course introduction video"><span><svg><use href="#i-play"/></svg></span></button>
+        </div>
+        <p class="video-caption"><svg><use href="#i-play"/></svg>Watch the course introduction (2 min 20 s)</p>
+      </div>
+      <div class="course-info reveal">
+        <span class="eyebrow">Online Fire Safety Course · €25</span>
+        <h2>Ireland's No.1 online fire safety training course</h2>
+        <p style="color:var(--muted)">Kirby Fire Safety designed this course to cover how fires start and spread, the five main causes of fire, and how to evacuate and help others. It's suitable for every business, including nursing homes, hotels, schools and office buildings.</p>
+        <div class="chips">
+          <span class="chip"><svg><use href="#i-clock"/></svg>1 hour</span>
+          <span class="chip"><svg><use href="#i-pause"/></svg>Complete in stages</span>
+          <span class="chip"><svg><use href="#i-device"/></svg>All devices</span>
+          <span class="chip"><svg><use href="#i-award"/></svg>Instant certificate</span>
+        </div>
+        <p style="font-weight:600;color:var(--ink);margin-bottom:6px">6 course modules</p>
+        <div class="modules" aria-label="Six course modules">
+          <div><b>1</b>Module</div><div><b>2</b>Module</div><div><b>3</b>Module</div><div><b>4</b>Module</div><div><b>5</b>Module</div><div><b>6</b>Module</div>
+        </div>
+        <p style="color:var(--muted);font-size:.92rem;margin-top:10px">Review what you watched and heard after each module, then submit. You can restart where you left off.</p>
+      </div>
+    </div>
+
+    <div class="reg-grid" id="register">
+      <div class="reg reveal">
+        <span class="tag">Single Registration</span>
+        <h3>Fire Safety Training for Individuals</h3>
+        <p>Register as an individual user and take the course at a time and place that suits you, on any device.</p>
+        <div class="actions">
+          <a href="https://firesafetraining.ie" class="btn btn-red" target="_blank" rel="noopener">Buy Course · €25</a>
+          <a href="https://firesafetraining.ie" class="btn btn-outline" target="_blank" rel="noopener">Login</a>
+        </div>
+      </div>
+      <div class="reg featured reveal">
+        <span class="tag">Group Registration</span>
+        <h3>Fire Safety Training for Your Team</h3>
+        <p>Group access for companies and business owners training their staff. Register once and manage your whole team's training.</p>
+        <div class="actions">
+          <a href="https://firesafetraining.ie" class="btn btn-gold" target="_blank" rel="noopener">Buy Group Access</a>
+          <a href="https://firesafetraining.ie" class="btn btn-outline" target="_blank" rel="noopener">Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ONSITE TRAINING -->
+<section class="section" id="onsite-training">
+  <div class="wrap">
+    <div class="split">
+      <div class="reveal">
+        <span class="eyebrow">Onsite Fire Safety Training</span>
+        <h2 style="font-size:clamp(1.9rem,3.6vw,2.7rem);margin:14px 0 18px">Training built around <em style="font-style:normal;color:var(--red)">your</em> building</h2>
+        <p style="color:var(--muted)">Kirby Fire Safety provides comprehensive onsite fire safety training for a wide range of sectors. So your team gets the most relevant instruction, our trainers learn your building's layout and specific fire hazards before every session.</p>
+        <p style="color:var(--muted)">Every course is site-specific and can be tailored to your compliance requirements. We usually train at your premises, but we can arrange an external venue if onsite delivery isn't possible.</p>
+        <div style="margin-top:28px"><a href="#contact" class="btn btn-dark">Request a Quote <svg><use href="#i-arrow"/></svg></a></div>
+      </div>
+      <div class="feature-panel reveal">
+        <h3>Sectors we train</h3>
+        <ul class="sector-list">
+          <li><svg><use href="#i-heart"/></svg>Hospitals</li>
+          <li><svg><use href="#i-heart"/></svg>Nursing homes</li>
+          <li><svg><use href="#i-building"/></svg>Schools &amp; colleges</li>
+          <li><svg><use href="#i-building"/></svg>Hotels</li>
+          <li><svg><use href="#i-building"/></svg>Offices</li>
+          <li><svg><use href="#i-bolt"/></svg>Industrial facilities</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="courses-grid">
+      <article class="ccard reveal">
+        <div class="top"><span class="num">01</span><svg><use href="#i-exit"/></svg><h3>Onsite Fire Safety &amp; Evacuation Training</h3></div>
+        <div class="body"><p>Practical training covering fire prevention, raising the alarm, using fire equipment and evacuation, including drills in a smoke-filled environment.</p><a href="#contact" class="link">Enquire <svg><use href="#i-arrow"/></svg></a></div>
+      </article>
+      <article class="ccard reveal">
+        <div class="top"><span class="num">02</span><svg><use href="#i-heart"/></svg><h3>Advanced Onsite Fire Safety Training (Residential)</h3></div>
+        <div class="body"><p>For residential and care settings: evacuation techniques, exit routes and resident safety, built around your building and your residents' needs.</p><a href="#contact" class="link">Enquire <svg><use href="#i-arrow"/></svg></a></div>
+      </article>
+      <article class="ccard reveal">
+        <div class="top"><span class="num">03</span><svg><use href="#i-warden"/></svg><h3>Fire Warden / Marshal Training Course</h3></div>
+        <div class="body"><p>Prepares nominated staff to lead in an emergency: warden duties, the fire register, coordinating evacuation and checking assembly points.</p><a href="#contact" class="link">Enquire <svg><use href="#i-arrow"/></svg></a></div>
+      </article>
+    </div>
+    <div class="also reveal">
+      <span>We also deliver:</span>
+      <span class="chip"><svg><use href="#i-flame"/></svg>Fire Awareness</span>
+      <span class="chip"><svg><use href="#i-exit"/></svg>Evacuation</span>
+      <span class="chip"><svg><use href="#i-ext"/></svg>Fire Extinguisher Training</span>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLIANCE -->
+<section class="section compliance" id="compliance">
+  <div class="wrap comp-grid">
+    <div class="reveal">
+      <span class="eyebrow">Fire Safety Legislation &amp; Compliance</span>
+      <h2>Fire safety training is a legal requirement</h2>
+      <p>Under Irish law, every business must give its staff adequate fire safety training.</p>
+      <div class="law">
+        <span>Fire Services Acts 1981 &amp; 2003</span>
+        <span>Safety, Health &amp; Welfare at Work Act 2005</span>
+      </div>
+      <p style="margin-bottom:18px">As a property owner or employer, you have a <strong style="color:#fff">"Duty of Care"</strong> to:</p>
+      <ol class="duty">
+        <li>Take reasonable measures to prevent fires breaking out.</li>
+        <li>Provide fire safety equipment and clear emergency procedures.</li>
+        <li>Make sure staff are trained in evacuation and the use of fire equipment.</li>
+      </ol>
+    </div>
+    <div class="care reveal">
+      <svg><use href="#i-shield"/></svg>
+      <h3>Special requirements for care homes</h3>
+      <p>For designated centres and nursing homes, our training meets the strict requirements of Regulation 28 of the Health Act 2007. We cover the specific emergency procedures, evacuation techniques and resident safety you need to stay fully compliant with HIQA standards.</p>
+      <span class="badge">HIQA · Health Act 2007, Regulation 28</span>
+      <div style="margin-top:26px"><a href="#contact" class="btn btn-gold">Contact Us</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- RISK ASSESSMENT -->
+<section class="section" id="risk-assessment">
+  <div class="wrap ra-grid">
+    <div class="ra-intro reveal">
+      <span class="eyebrow">Fire Risk Assessment Ireland</span>
+      <h2>Professional fire inspections &amp; emergency plans</h2>
+      <p>We carry out comprehensive fire safety inspections for businesses of every size and type, as well as private homes. If you'd like a fire risk assessment, or you're worried about fire hazards at work or at home, contact us and we'll send our local fire safety advisor to your premises.</p>
+      <ol class="process">
+        <li><b>1</b><div><strong>Full evaluation</strong> of your premises in terms of fire safety.</div></li>
+        <li><b>2</b><div><strong>Detailed physical inspection</strong> of fire safety records and equipment.</div></li>
+        <li><b>3</b><div><strong>A professional written report</strong> with an action plan to minimise the risk of fire.</div></li>
+      </ol>
+      <a href="#contact" class="btn btn-red">Book an Assessment <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="reveal">
+      <p style="color:var(--muted);margin-bottom:20px">Our fire safety audit covers every critical element of your premises to ensure full legal compliance. The inspection includes a detailed review of:</p>
+      <div class="checks">
+        <div class="check"><div class="icon"><svg><use href="#i-alarm"/></svg></div><h4>Life safety systems</h4><p>Full testing and inspection of the fire alarm control panel, smoke and heat detectors, and emergency lighting.</p></div>
+        <div class="check"><div class="icon"><svg><use href="#i-ext"/></svg></div><h4>Essential fire equipment</h4><p>Visual and physical checks of all firefighting equipment and extinguishers.</p></div>
+        <div class="check"><div class="icon"><svg><use href="#i-door"/></svg></div><h4>Structural protection</h4><p>Assessment of fire doors, escape routes and primary means of escape.</p></div>
+        <div class="check"><div class="icon"><svg><use href="#i-sign"/></svg></div><h4>Clearance &amp; visibility</h4><p>Verification of fire safety signage and designated assembly points.</p></div>
+        <div class="check"><div class="icon"><svg><use href="#i-bolt"/></svg></div><h4>Hazard control</h4><p>Review of heating systems, electrical installations and potential ignition sources.</p></div>
+        <div class="check"><div class="icon"><svg><use href="#i-doc"/></svg></div><h4>Readiness &amp; compliance</h4><p>Evaluation of fire drills, staff training needs and mandatory fire safety records.</p></div>
+      </div>
+      <div class="equip">
+        <span class="chip"><svg><use href="#i-alarm"/></svg>Smoke alarm testing</span>
+        <span class="chip"><svg><use href="#i-bolt"/></svg>Alarm panel inspection</span>
+        <span class="chip"><svg><use href="#i-ext"/></svg>Extinguisher servicing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="band">
+  <div class="wrap">
+    <h2>Need more information? Talk to our fire safety experts today.</h2>
+    <div class="row">
+      <a href="tel:+353863716251" class="btn btn-dark"><svg><use href="#i-phone"/></svg>086 371 6251</a>
+      <a href="#contact" class="btn btn-outline">Send an Enquiry</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="eyebrow">About Kirby Fire Safety</span>
+        <h2>Over 60 years of firefighting experience behind every course</h2>
+        <p>Since 2001, Kirby Fire Safety has delivered professional fire safety courses to healthcare facilities, private industry, schools, colleges, hotels and many other businesses.</p>
+        <p>With over 60 years' combined experience as operational firefighters between our two directors, we use that expertise to give every customer the best possible service and the highest standard of fire safety training.</p>
+        <p>Our aim is to give you the skills and knowledge to practise fire safety at home and at work: to understand the dangers of fire, and to have the confidence to follow the right procedures to evacuate and help others.</p>
+      </div>
+      <div class="offices reveal">
+        <div class="office hq"><svg><use href="#i-pin"/></svg><div><b>Head Office: Shannon</b><span>Smithstown, Shannon, Co. Clare</span></div></div>
+        <div class="office"><svg><use href="#i-pin"/></svg><div><b>Dublin</b><span>Leinster</span></div></div>
+        <div class="office"><svg><use href="#i-pin"/></svg><div><b>Galway</b><span>Connacht</span></div></div>
+        <div class="office"><svg><use href="#i-pin"/></svg><div><b>Limerick</b><span>Munster</span></div></div>
+        <div class="office"><svg><use href="#i-pin"/></svg><div><b>Sligo</b><span>North-West</span></div></div>
+      </div>
+    </div>
+
+    <div class="section-head center reveal" style="margin-bottom:40px">
+      <span class="eyebrow">Meet the Team</span>
+      <h2>Fire safety experts, Ireland</h2>
+    </div>
+    <div class="team">
+      <article class="person reveal">
+        <div class="photo"><img src="assets/pat-kirby.png" alt="Pat Kirby, Founder of Kirby Fire Safety" loading="lazy" width="400" height="560"></div>
+        <div class="info">
+          <span class="role">Founder</span>
+          <h3>Pat Kirby</h3>
+          <p>Pat has a lifetime of fire safety experience, having served 32 years with the Airport Police &amp; Fire Service at Shannon International Airport, the last 10 as Chief Fire &amp; Police Officer.</p>
+          <details class="more">
+            <summary>Read more</summary>
+            <p>In 2002 he set up Kirby Fire Safety at its current premises in Smithstown, Shannon, Co. Clare. Pat holds a Senior Fire Officer Certificate from the UK Civil Aviation Authority and a Breathing Apparatus Instructor's Certificate from Lancashire County Fire Service. In November 2002 he was awarded a Diploma in Training &amp; Education by the National University of Ireland, Galway.</p>
+          </details>
+          <div class="creds"><span>Chief Fire Officer</span><span>UK CAA Senior Fire Officer</span><span>NUI Galway Dip.</span></div>
+        </div>
+      </article>
+      <article class="person reveal">
+        <div class="photo"><img src="assets/enda-kirby.png" alt="Enda Kirby, Head Instructor at Kirby Fire Safety" loading="lazy" width="400" height="560"></div>
+        <div class="info">
+          <span class="role">Head Instructor</span>
+          <h3>Enda Kirby</h3>
+          <p>Enda has 26 years' experience as a firefighter and has delivered fire safety courses for 25 years. He began his career with Clare County Fire Service in Ennis in 1993, then joined Galway City Fire Service as a full-time firefighter in 2001.</p>
+          <details class="more">
+            <summary>Read more</summary>
+            <p>In the fire service, Enda completed courses in Breathing Apparatus, Compartment Fire Behaviour, Wildland Firefighting, Swift Water Rescue, Heights Rescue, Road Traffic Collision Extrication, Aviation Firefighting and Manual Handling, and he is a First Responder. He holds a Certificate in Occupational Health &amp; Safety from NISO and a QQI Level 6 Component Award in Train the Trainer.</p>
+          </details>
+          <div class="creds"><span>Galway City Fire Service</span><span>NISO OH&amp;S</span><span>QQI L6 Train the Trainer</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonials">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Testimonials</span>
+      <h2>What our clients say</h2>
+    </div>
+    <div class="tgrid">
+      <figure class="tcard reveal">
+        <svg class="q"><use href="#i-quote"/></svg>
+        <blockquote>"By far the most in-depth and professional training I've had. Enda's passion and energy were reciprocated by all. Highly recommend for fire safety training sessions."</blockquote>
+        <figcaption class="who"><span class="avatar">HM</span><div><b>Hazel McMahon</b><span>HSE</span></div></figcaption>
+      </figure>
+      <figure class="tcard reveal">
+        <svg class="q"><use href="#i-quote"/></svg>
+        <blockquote>"Enda has offered a wealth of knowledge and support given his background in the fire services. We have maintained full compliance with fire regulations and I honestly could not recommend Kirby Fire Safety enough."</blockquote>
+        <figcaption class="who"><span class="avatar">TC</span><div><b>Tom Cummins</b><span>Cherry Grove Nursing Home</span></div></figcaption>
+      </figure>
+      <figure class="tcard reveal">
+        <svg class="q"><use href="#i-quote"/></svg>
+        <blockquote>"The sessions are extremely engaging and delivered in a way that keeps everyone interested. Our staff come away feeling confident and well-prepared."</blockquote>
+        <figcaption class="who"><span class="avatar">EN</span><div><b>Emma Jane Nortje</b><span>Hot Box Sauna</span></div></figcaption>
+      </figure>
+      <figure class="tcard reveal">
+        <svg class="q"><use href="#i-quote"/></svg>
+        <blockquote>"A brilliant asset to our organisation. Enda's professionalism, flexibility, and value for money set him apart. Highly recommended."</blockquote>
+        <figcaption class="who"><span class="avatar">CM</span><div><b>Cian MacLochlainn</b><span>Horizons Cork</span></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section course" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Contact Us</span>
+      <h2>Let's make your workplace fire safe</h2>
+      <p>For onsite training, group bookings or a fire risk assessment, get in touch and we'll come back to you quickly with the right solution and a quote.</p>
+      <div class="cinfo">
+        <a href="tel:+353863716251"><span class="ic"><svg><use href="#i-phone"/></svg></span><span><small>Call Enda</small><b>086 371 6251</b></span></a>
+        <a href="mailto:enda@firesafetraining.ie"><span class="ic"><svg><use href="#i-mail"/></svg></span><span><small>Email</small><b>enda@firesafetraining.ie</b></span></a>
+        <div class="ci"><span class="ic"><svg><use href="#i-pin"/></svg></span><span><small>Head Office</small><b>Smithstown, Shannon, Co. Clare</b></span></div>
+      </div>
+    </div>
+    <form class="card reveal" id="enquiry" novalidate>
+      <h3>Send an enquiry</h3>
+      <p>Tell us what you need and we'll be in touch.</p>
+      <div class="fields">
+        <div class="field"><label for="f-name">Name *</label><input id="f-name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="f-company">Company / Organisation</label><input id="f-company" name="company" autocomplete="organization"></div>
+        <div class="field"><label for="f-email">Email *</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field full"><label for="f-service">I'm interested in</label>
+          <select id="f-service" name="service">
+            <option>Onsite Fire Safety &amp; Evacuation Training</option>
+            <option>Advanced Onsite Training (Residential / Care Home)</option>
+            <option>Fire Warden / Marshal Training</option>
+            <option>Online Course: Group Registration</option>
+            <option>Fire Risk Assessment / Inspection</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field full"><label for="f-msg">Message *</label><textarea id="f-msg" name="message" required placeholder="Number of staff, location, preferred dates…"></textarea></div>
+      </div>
+      <button type="submit" class="btn btn-red">Send Enquiry <svg><use href="#i-arrow"/></svg></button>
+      <p class="form-note" id="formNote">This opens your email app with your enquiry ready to send.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="flogo"><img src="assets/logo-tight.jpg" alt="Kirby Fire Safety" loading="lazy" width="600" height="292"></div>
+        <p>Professional fire safety training and fire risk assessments across Ireland since 2001.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#online-course">Online Fire Safety Course</a></li>
+          <li><a href="#onsite-training">Onsite Training</a></li>
+          <li><a href="#onsite-training">Fire Warden / Marshal</a></li>
+          <li><a href="#risk-assessment">Fire Risk Assessment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="#register">Individual Bookings</a></li>
+          <li><a href="#register">Group Bookings</a></li>
+          <li><a href="https://firesafetraining.ie" target="_blank" rel="noopener">Register / Login</a></li>
+          <li><a href="https://firesafetraining.ie" target="_blank" rel="noopener">Privacy Policy</a></li>
+          <li><a href="https://firesafetraining.ie" target="_blank" rel="noopener">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <ul>
+          <li><a href="tel:+353863716251">086 371 6251</a></li>
+          <li><a href="mailto:enda@firesafetraining.ie">enda@firesafetraining.ie</a></li>
+          <li>Smithstown, Shannon, Co. Clare</li>
+          <li>Dublin · Sligo · Limerick · Galway</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbottom">
+      <span>© <span id="year">2026</span> Kirby Fire Safety. All rights reserved.</span>
+      <span>Fire Safety Experts Ireland</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+353863716251" class="call-fab" aria-label="Call Kirby Fire Safety"><svg><use href="#i-phone"/></svg></a>
+<button class="to-top" id="toTop" aria-label="Back to top"><svg><use href="#i-up"/></svg></button>
+
+<script>
+(() => {
+  const header = document.getElementById('header');
+  const toTop = document.getElementById('toTop');
+  const callFab = document.querySelector('.call-fab');
+  const onScroll = () => {
+    const y = window.scrollY;
+    header.classList.toggle('scrolled', y > 10);
+    toTop.classList.toggle('show', y > 600);
+    callFab.classList.toggle('show', y > 600);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  toTop.addEventListener('click', () => window.scrollTo({ top: 0 }));
+
+  // Mobile menu
+  const burger = document.getElementById('burger');
+  const setNav = open => {
+    document.body.classList.toggle('nav-open', open);
+    burger.setAttribute('aria-expanded', open);
+  };
+  burger.addEventListener('click', () => setNav(!document.body.classList.contains('nav-open')));
+  document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => setNav(false)));
+
+  // Reveal on scroll
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Embers
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const box = document.getElementById('embers');
+    for (let i = 0; i < 26; i++) {
+      const e = document.createElement('i');
+      e.style.left = (40 + Math.random() * 60) + '%';
+      e.style.animationDuration = (6 + Math.random() * 8) + 's';
+      e.style.animationDelay = (-Math.random() * 14) + 's';
+      e.style.setProperty('--dx', (Math.random() * 120 - 60) + 'px');
+      const s = 2 + Math.random() * 4;
+      e.style.width = e.style.height = s + 'px';
+      box.appendChild(e);
+    }
+  }
+
+  // Video play overlay
+  const video = document.getElementById('courseVideo');
+  const play = document.getElementById('playBtn');
+  play.addEventListener('click', () => video.play());
+  video.addEventListener('play', () => play.classList.add('hidden'));
+  video.addEventListener('ended', () => play.classList.remove('hidden'));
+
+  // Enquiry form -> email
+  document.getElementById('enquiry').addEventListener('submit', ev => {
+    ev.preventDefault();
+    const f = ev.target;
+    const note = document.getElementById('formNote');
+    if (!f.checkValidity()) {
+      f.reportValidity();
+      return;
+    }
+    const d = Object.fromEntries(new FormData(f));
+    const body = `Name: ${d.name}\nCompany: ${d.company || '-'}\nEmail: ${d.email}\nPhone: ${d.phone || '-'}\nInterested in: ${d.service}\n\n${d.message}`;
+    location.href = 'mailto:enda@firesafetraining.ie?subject=' +
+      encodeURIComponent('Website enquiry: ' + d.service) + '&body=' + encodeURIComponent(body);
+    note.textContent = 'Your email app should now be open. Just press send.';
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
