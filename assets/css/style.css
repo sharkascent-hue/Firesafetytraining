@@ -13,9 +13,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
-html,body{overflow-x:hidden}
-@supports (overflow:clip){html,body{overflow-x:clip}}
-body{font-family:var(--body);color:var(--text);background:var(--white);line-height:1.65;font-size:16.5px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:var(--body);color:var(--text);background:var(--white);line-height:1.65;font-size:16.5px;-webkit-font-smoothing:antialiased}
 img,video,svg{max-width:100%;display:block}
 a{color:inherit}
 h1,h2,h3,h4{font-family:var(--head);color:var(--ink);line-height:1.1;letter-spacing:-.01em}
@@ -650,8 +648,7 @@ footer a:hover{color:var(--gold)}
 @media (max-width:1024px){.reveal.left,.reveal.right{transform:translateY(34px)}}
 
 /* Page only scrolls up and down: no sideways panning on touch screens */
-html,body{touch-action:pan-y pinch-zoom;overscroll-behavior-x:none;max-width:100%}
-.hero,.page-hero,.section,footer,.band,.stats{overflow-x:clip}
+html,body{overscroll-behavior-x:none}
 @media (max-width:680px){
   .float-card.a{left:0}
   .float-card.b{right:0}
@@ -659,3 +656,9 @@ html,body{touch-action:pan-y pinch-zoom;overscroll-behavior-x:none;max-width:100
   .ring{width:min(340px,72vw)}
   .report .stamp{right:4px}
 }
+
+/* Everything lives in .page, which cuts off anything wider than the screen.
+   (iPhone Safari ignores overflow on html/body, but respects it here.) */
+.page{position:relative;width:100%;max-width:100vw;overflow-x:hidden}
+@supports (overflow:clip){.page{overflow-x:clip}}
+@media (max-width:680px){.report .stamp{right:10px;bottom:-24px;width:92px;height:92px;transform:rotate(-14deg) scale(1.12)}.report.in .stamp{transform:rotate(-14deg) scale(1)}}
