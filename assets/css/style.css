@@ -648,3 +648,14 @@ footer a:hover{color:var(--gold)}
 .who .avatar{display:grid;place-items:center;flex:none;color:#fff;font-size:1rem;text-align:center;line-height:1}
 /* On phones and tablets, slide-ins come from below (no sideways overflow) */
 @media (max-width:1024px){.reveal.left,.reveal.right{transform:translateY(34px)}}
+
+/* Page only scrolls up and down: no sideways panning on touch screens */
+html,body{touch-action:pan-y pinch-zoom;overscroll-behavior-x:none;max-width:100%}
+.hero,.page-hero,.section,footer,.band,.stats{overflow-x:clip}
+@media (max-width:680px){
+  .float-card.a{left:0}
+  .float-card.b{right:0}
+  .float-card.c{left:2%}
+  .ring{width:min(340px,72vw)}
+  .report .stamp{right:4px}
+}
